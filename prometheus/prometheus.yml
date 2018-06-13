@@ -24,6 +24,7 @@ scrape_configs:
       - targets: ['cadvisor:8080']
       - targets: ['192.168.1.147:8080']
       - targets: ['192.168.1.151:8080']
+      - targets: ['192.168.1.174:8899']
   - job_name: 'prometheus'
     scrape_interval: 10s
     static_configs:
