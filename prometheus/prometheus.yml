@@ -17,17 +17,17 @@ scrape_configs:
     scrape_interval: 5s
     static_configs:
       - targets: ['localhost:9100']
-      - targets: ['192.168.1.174:9100'] 
-      - targets: ['192.168.1.147:9100']
-      - targets: ['192.168.1.151:9200']
+      - targets: ['vtb4:9100'] 
+      - targets: ['vtb5:9100']
+      - targets: ['vtb6:9200']
   
   - job_name: 'cadvisor'
     scrape_interval: 5s
     static_configs:
-      - targets: ['cadvisor:8080']
-      - targets: ['192.168.1.147:8899']
-      - targets: ['192.168.1.151:8899']
-      - targets: ['192.168.1.174:8899']
+      - targets: ['localhost:8080']
+      - targets: ['vtb4:8899']
+      - targets: ['vtb5:8899']
+      - targets: ['vtb6:8899']
   - job_name: 'prometheus'
     scrape_interval: 10s
     static_configs:
